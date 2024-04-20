@@ -7,7 +7,7 @@ while (op)
     Console.WriteLine("Qual o seu gênero? M para Mulher H para Homem");
     genero = char.Parse(Console.ReadLine());
 
-    if (genero != 'm' && genero != 'h')
+    if (genero != 'm' && genero != 'h' && genero != 'M' && genero != 'H')
     {
         Console.WriteLine("Digite apenas os caracteres informados, tente novamente!!!!!");
         break;
