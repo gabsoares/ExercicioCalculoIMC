@@ -1,18 +1,15 @@
 ﻿char genero;
 double altura, peso, IMC;
-bool op = true;
 
-while (op)
+Console.WriteLine("Qual o seu gênero? M para Mulher H para Homem");
+genero = char.Parse(Console.ReadLine());
+
+if (genero != 'm' && genero != 'h' && genero != 'M' && genero != 'H')
 {
-    Console.WriteLine("Qual o seu gênero? M para Mulher H para Homem");
-    genero = char.Parse(Console.ReadLine());
-
-    if (genero != 'm' && genero != 'h' && genero != 'M' && genero != 'H')
-    {
-        Console.WriteLine("Digite apenas os caracteres informados, tente novamente!!!!!");
-        break;
-    }
-
+    Console.WriteLine("Digite apenas os caracteres informados, tente novamente!!!!!");
+}
+else
+{
     Console.WriteLine("Qual a sua altura em metros?");
     altura = double.Parse(Console.ReadLine());
 
@@ -47,5 +44,4 @@ while (op)
         else
             Console.WriteLine($"Obesidade! IMC = {IMC}");
     }
-    op = false;
 }
